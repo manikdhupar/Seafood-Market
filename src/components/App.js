@@ -2,13 +2,14 @@ import React from 'react';
 import Header from './Header';
 import Order from './Order';
 import Inventory from './Inventory';
+import sampleFishes from '../sample-fishes';
 
 class App extends React.Component{
     state={
         fishes:{},
         order:{}
     }
-
+    
     addFish=(fish)=>{
         const fishes={...this.state.fishes};
         fishes['fish' +Date.now().toString()]=fish;
@@ -18,6 +19,12 @@ class App extends React.Component{
         });
     }
 
+    loadSampleFishes=()=>{
+        this.setState({
+            fishes: sampleFishes
+        })
+    }
+
     render(){
         return(
             <div className='catch-of-the-day'>
@@ -25,7 +32,7 @@ class App extends React.Component{
                     <Header tagline="manik is awesome!"/>
                 </div>
                 <Order />
-                <Inventory addFish={this.addFish} />
+                <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
             </div>
         );
     }
