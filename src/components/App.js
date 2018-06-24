@@ -25,16 +25,6 @@ class App extends React.Component{
             fishes: sampleFishes
         })
     }
-    loadSampleFishes=()=>{
-        this.setState({
-            fishes: sampleFishes
-        })
-    }
-    loadSampleFishes=()=>{
-        this.setState({
-            fishes: sampleFishes
-        })
-    }
 
     render(){
         return(
