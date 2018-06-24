@@ -1,7 +1,7 @@
 import React from 'react';
 import AddFishForm from './AddFishForm';
 
-class Order extends React.Component{
+class Inventory extends React.Component{
     render(){
         return(
             <div className="inventory">
@@ -12,4 +12,4 @@ class Order extends React.Component{
     }
 }
 
-export default Order;
+export default Inventory;
